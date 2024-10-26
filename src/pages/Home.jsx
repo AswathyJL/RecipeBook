@@ -42,8 +42,8 @@ const Home = () => {
   return (
     <>
         <Header insideHome = {true}/>
-        <div style={{paddingTop:'100px'}} className='px-5 continer'>
-            <h1 className='text-center mb-5 fw-bolder text-warning'>All Recipes</h1>
+        <div style={{paddingTop:'50px'}} className='px-5 continer'>
+            <h1 className='text-center mb-4 fw-bolder text-warning'>All Recipes</h1>
             <>
                 {
                     loading ?
@@ -58,7 +58,7 @@ const Home = () => {
                             visibleRecipeCards.map((recipe,index)=>(
                                 <div key={index} className="col-lg-3 col-md-6">
                                     <div className="card text-white bg-primary mb-3 rounded-5 border-primary shadow">
-                                            <img style={{height:'15rem', objectFit:'cover'}} width={'100%'}  className='img-fluid rounded-top-5 shadow' src={recipe.image} alt="" />
+                                            <img style={{height:'10rem', objectFit:'cover'}} width={'100%'}  className='img-fluid rounded-top-5 shadow' src={recipe.image} alt="" />
                                             <div className="card-body d-flex justify-content-center align-items-center flex-column">
                                                 <h4 style={{fontSize:"1.05rem"}} className="card-title fw-bold text-white">{recipe.name}</h4>
                                                 <Link style={{fontSize:'0.7rem'}} to={`/${recipe.id}/view`} className='btn btn-dark fw-bold'>View more...</Link>
